@@ -31,15 +31,10 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util.js';
         }
       });
     } catch (error) {
-      return res.status(422).send({ message: 'Can not process the image', error: error });
+      return res.status(422).send({ message: 'Can not process the image with error', error: error });
     }
   });
 
-
-  app.get( "/", async (req, res) => {
-    res.send("try GET /filteredimage?image_url={{}}")
-  } );
-  
   // Root Endpoint
   // Displays a simple message to the user
   app.get( "/", async (req, res) => {
