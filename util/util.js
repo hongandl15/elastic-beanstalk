@@ -14,11 +14,11 @@ import axios from "axios";
   return new Promise(async (resolve, reject) => {
     try {
 
-      const res = await axios({
-        url: inputURL,
-        method: 'GET',
-        responseType: 'arraybuffer',
-      })
+      // const res = await axios({
+      //   url: inputURL,
+      //   method: 'GET',
+      //   responseType: 'arraybuffer',
+      // })
 
       const photo = await Jimp.read(inputURL);
       const outpath =
